@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => {
     preview: {
       host: true,
       port: parseInt(process.env.PORT) || 5173,
-      allowedHosts: "tp-front-tchoumi313.onrender.com"
+      allowedHosts: ['tp-front-tchoumi313.onrender.com']
     },
   }
 })
