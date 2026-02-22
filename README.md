@@ -1,16 +1,35 @@
-# React + Vite
+# Fonctionnalités Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Ce qui était demandé
 
-Currently, two official plugins are available:
+- liste paginée, 
+- affichage d'un Pokémon, 
+- création, 
+- modification et suppression.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Ce que j'ai ajouté
 
-## React Compiler
+### Comparaison de Pokémon
+On peut comparer deux Pokémon côte à côte avec leurs stats en barres, un indicateur de gagnant, et les différences de stats 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Suppression multiple
+Au lieu de supprimer un par un, j'ai mis des cases à cocher pour en supprimer plusieurs d'un coup.
 
-## Expanding the ESLint configuration
+### Duplication
+Un bouton pour dupliquer un Pokémon rapidement, ça crée une copie avec "(copy)" ajouté au nom.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Système d'équipes (route `/team`)
+J'ai créé un système pour créer des équipes de 6 Pokémon max. On peut les sauvegarder avec un nom, les recharger plus tard, ou les supprimer. Tout est sauvegardé en base de données.
+
+### Simulateur de combat (route `/fight`)
+Un mini-jeu où deux Pokémon se battent tour par tour. Le plus rapide attaque en premier, et les dégâts dépendent de l'Attaque et de la Défense.
+
+### Filtres et tri
+J'ai ajouté un filtre par type (Fire, Water, etc.) et plusieurs options de tri (nom, HP, attaque, etc.). Le filtre est géré côté backend pour que la pagination marche bien.
+
+### Upload d'images
+Possibilité d'uploader une image quand tu crées un Pokémon, avec une prévisualisation avant l'envoi.
+
+**Vidéo démo:** https://youtu.be/NcBpNu44ENA
+**Vidéo de la mise a jour UI + OIDC Auth:** https://youtu.be/NZ4H3JZkxg8
+
