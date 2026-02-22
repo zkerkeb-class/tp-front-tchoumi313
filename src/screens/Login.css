@@ -1,0 +1,135 @@
+.login-page {
+  min-height: 100vh;
+  background: #f3f1e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-card {
+  background: #fffaf0;
+  border: 3px solid #d6cdbf;
+  border-radius: 24px;
+  padding: 48px 40px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.login-logo {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #202733, #3a4555);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin-bottom: 4px;
+}
+
+.login-pokeball {
+  font-size: 40px;
+  line-height: 1;
+  filter: brightness(0) invert(1);
+}
+
+.login-title {
+  font-size: 30px;
+  font-weight: 900;
+  color: #202733;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.login-subtitle {
+  font-size: 15px;
+  color: #6b5b3e;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.login-error {
+  background: #f8e4e4;
+  border: 2px solid #e8b5b5;
+  color: #dc2626;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.login-google-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ffffff;
+  border: 2px solid #d6cdbf;
+  border-radius: 12px;
+  padding: 13px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2b2b2b;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-top: 8px;
+}
+
+.login-google-btn:hover {
+  background: #f0ece3;
+  border-color: #b59b6f;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.14);
+  transform: translateY(-1px);
+}
+
+.login-google-btn:active {
+  transform: translateY(0);
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.login-footer {
+  font-size: 12px;
+  color: #9a8c7a;
+  margin: 0;
+}
+
+/* Auth loading spinner (shared via App.css or here) */
+.auth-loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: #f3f1e7;
+  color: #6b5b3e;
+  font-size: 15px;
+}
+
+.auth-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #d6cdbf;
+  border-top-color: #b59b6f;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
