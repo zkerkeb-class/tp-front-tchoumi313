@@ -5,17 +5,11 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd())
   const backendUrl = env.VITE_API_URL
 
-  const serverConfig = mode === 'development' 
+  const devOnlyProxy = mode === 'development' 
     ? {
-        proxy: {
-          '/api': {
-            target: backendUrl,
-            changeOrigin: true,
-          },
-          '/assets': {
-            target: backendUrl,
-            changeOrigin: true,
-          },
+        '/assets': {
+          target: backendUrl,
+          changeOrigin: true,
         },
       }
     : {}
@@ -23,7 +17,13 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     server: {
-      ...serverConfig,
+      proxy: {
+        '/api': {
+          target: backendUrl,
+          changeOrigin: true,
+        },
+        ...devOnlyProxy,
+      },
     },
     preview: {
       host: true,
