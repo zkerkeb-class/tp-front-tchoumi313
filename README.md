@@ -31,6 +31,7 @@ J'ai ajouté un filtre par type (Fire, Water, etc.) et plusieurs options de tri 
 Possibilité d'uploader une image quand tu crées un Pokémon, avec une prévisualisation avant l'envoi.
 
 **Vidéo démo:** https://youtu.be/NcBpNu44ENA
+
 **Vidéo de la mise a jour UI + OIDC Auth:** https://youtu.be/NZ4H3JZkxg8
 
 
